@@ -99,8 +99,9 @@ public class Prospecto_Activity extends AppCompatActivity {
 
     //metodo de prospectos
     private void lista_Prospectos() {
+        IP ip=new IP();
         String categoria= "Prospecto";
-        String url = "http://192.168.1.65:3977/api/consultarClientesXCategoria";
+        String url = ip.getIP()+":3977/api/consultarClientesXCategoria";
         JsonObjectRequest requerimiento = new JsonObjectRequest(Request.Method.POST,
                 url,
                 null,
